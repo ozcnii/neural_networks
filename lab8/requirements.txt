@@ -1,0 +1,15 @@
+# Версии зафиксированы из рабочего venv (lab8/.venv), Python 3.9.6, arm64, CPU.
+# Самописная НС реализована на чистом NumPy (torch не требуется).
+h2o==3.46.0.11
+fedot==0.7.5
+optuna==4.8.0
+scikit-learn==1.2.2
+numpy==1.24.4
+pandas==1.5.3
+matplotlib==3.9.4
+lightgbm==4.6.0
+
+# Системные зависимости (не ставятся через pip):
+#   - Java (для H2O): проверено на Oracle JDK 24; H2O 3.46 поднимает кластер
+#     на Java 24 без дополнительной настройки.
+#   - libomp (OpenMP runtime для lightgbm, нужен FEDOT): brew install libomp

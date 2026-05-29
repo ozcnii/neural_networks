@@ -145,3 +145,5 @@ vite.config.ts.timestamp-*
 .DS_Store
 # matplotlib runtime cache
 .matplotlib_cache/
+
+.venv
