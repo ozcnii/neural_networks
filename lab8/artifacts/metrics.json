@@ -40,19 +40,19 @@
       ]
     },
     "H2O AutoML": {
-      "accuracy": 0.9583333333333334,
-      "roc_auc": 0.9878472222222223,
-      "f1": 0.9583333333333334,
-      "precision": 0.9583333333333334,
-      "recall": 0.9583333333333334,
+      "accuracy": 0.9375,
+      "roc_auc": 0.9878472222222222,
+      "f1": 0.9361702127659574,
+      "precision": 0.9565217391304348,
+      "recall": 0.9166666666666666,
       "confusion_matrix": [
         [
           23,
           1
         ],
         [
-          1,
-          23
+          2,
+          22
         ]
       ]
     },
@@ -75,10 +75,10 @@
     }
   },
   "h2o": {
-    "leader_id": "StackedEnsemble_AllModels_1_AutoML_1_20260530_03740",
-    "cv_auc": 0.9693877551020408,
+    "leader_id": "StackedEnsemble_BestOfFamily_1_AutoML_1_20260530_05352",
+    "cv_auc": 0.9702561875814156,
     "n_models": 22,
-    "varimp_model": "GLM_1_AutoML_1_20260530_03740"
+    "varimp_model": "GLM_1_AutoML_1_20260530_05352"
   },
   "fedot": {
     "nodes": [
