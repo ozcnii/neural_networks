@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 360" font-family="-apple-system, 'Segoe UI', Roboto, sans-serif">
+  <rect width="760" height="360" fill="#ffffff"/>
+  <defs>
+    <marker id="d19" markerWidth="9" markerHeight="9" refX="6" refY="3" orient="auto"><path d="M0,0 L6,3 L0,6 Z" fill="#475569"/></marker>
+  </defs>
+  <text x="380" y="28" text-anchor="middle" font-size="19" font-weight="700" fill="#0f172a">Качество данных решает: «мусор на входе → мусор на выходе»</text>
+
+  <!-- good case -->
+  <rect x="25" y="55" width="710" height="90" rx="12" fill="#f0fdf4" stroke="#86efac"/>
+  <text x="45" y="80" font-size="13.5" font-weight="700" fill="#15803d">✓ Хорошие данные → хорошая сеть</text>
+  <g font-size="11" text-anchor="middle">
+    <rect x="60" y="92" width="44" height="40" rx="5" fill="#fff" stroke="#16a34a"/><text x="82" y="116">🌲🚜</text>
+    <rect x="112" y="92" width="44" height="40" rx="5" fill="#fff" stroke="#16a34a"/><text x="134" y="116">🏜🚜</text>
+    <rect x="164" y="92" width="44" height="40" rx="5" fill="#fff" stroke="#16a34a"/><text x="186" y="116">🌃🚜</text>
+  </g>
+  <text x="232" y="116" font-size="11" fill="#166534">танки на РАЗНОМ фоне</text>
+  <line x1="350" y1="113" x2="400" y2="113" stroke="#475569" stroke-width="1.6" marker-end="url(#d19)"/>
+  <rect x="405" y="95" width="150" height="36" rx="8" fill="#dcfce7" stroke="#16a34a"/><text x="480" y="118" text-anchor="middle" font-size="12" fill="#15803d">учит сам ТАНК</text>
+  <text x="640" y="118" text-anchor="middle" font-size="12" fill="#166534" font-weight="600">обобщает верно</text>
+
+  <!-- bad case 1: bias -->
+  <rect x="25" y="155" width="710" height="90" rx="12" fill="#fef2f2" stroke="#fca5a5"/>
+  <text x="45" y="180" font-size="13.5" font-weight="700" fill="#b91c1c">✗ Смещённые данные → сеть учит НЕ ТО</text>
+  <g font-size="11" text-anchor="middle">
+    <rect x="60" y="192" width="44" height="40" rx="5" fill="#fff" stroke="#dc2626"/><text x="82" y="216">🌲🚜</text>
+    <rect x="112" y="192" width="44" height="40" rx="5" fill="#fff" stroke="#dc2626"/><text x="134" y="216">🌲🚜</text>
+    <rect x="164" y="192" width="44" height="40" rx="5" fill="#fff" stroke="#dc2626"/><text x="186" y="216">🌲🚜</text>
+  </g>
+  <text x="232" y="216" font-size="11" fill="#b91c1c">все на ОДНОМ фоне (лес)</text>
+  <line x1="350" y1="213" x2="400" y2="213" stroke="#475569" stroke-width="1.6" marker-end="url(#d19)"/>
+  <rect x="405" y="195" width="150" height="36" rx="8" fill="#fee2e2" stroke="#dc2626"/><text x="480" y="218" text-anchor="middle" font-size="12" fill="#b91c1c">выучила ФОН (лес)</text>
+  <text x="640" y="218" text-anchor="middle" font-size="11.5" fill="#b91c1c" font-weight="600">провал на новом фоне</text>
+
+  <!-- bad case 2: label error -->
+  <rect x="25" y="255" width="710" height="80" rx="12" fill="#fffbeb" stroke="#fcd34d"/>
+  <text x="45" y="280" font-size="13.5" font-weight="700" fill="#b45309">✗ Ошибки разметки → сеть ошибается вслед за человеком</text>
+  <g font-size="11" text-anchor="middle">
+    <rect x="60" y="292" width="60" height="34" rx="5" fill="#fff" stroke="#f59e0b"/><text x="90" y="313">🐕🍒</text>
+  </g>
+  <text x="210" y="308" font-size="11.5" fill="#92400e">человек пометил «вишня»,</text>
+  <text x="210" y="324" font-size="11.5" fill="#92400e">хотя главное — далматинец</text>
+  <line x1="430" y1="309" x2="475" y2="309" stroke="#475569" stroke-width="1.6" marker-end="url(#d19)"/>
+  <text x="600" y="313" text-anchor="middle" font-size="11.5" fill="#b45309" font-weight="600">сеть «ошиблась» вслед за разметчиком</text>
+</svg>

@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 230" font-family="-apple-system, 'Segoe UI', Roboto, sans-serif">
+  <rect x="0" y="0" width="760" height="230" fill="#ffffff"/>
+  <text x="380" y="26" text-anchor="middle" font-size="17" font-weight="700" fill="#0f172a">Виды функций активации</text>
+
+  <!-- panel template: axes -->
+  <!-- 1: step -->
+  <g transform="translate(20,50)">
+    <rect width="160" height="140" rx="8" fill="#f8fafc" stroke="#e2e8f0"/>
+    <line x1="20" y1="115" x2="150" y2="115" stroke="#94a3b8" stroke-width="1"/>
+    <line x1="80" y1="20" x2="80" y2="125" stroke="#94a3b8" stroke-width="1"/>
+    <path d="M20,115 L80,115 L80,45 L150,45" fill="none" stroke="#2563eb" stroke-width="2.5"/>
+    <text x="80" y="20" text-anchor="middle" font-size="12" font-weight="600" fill="#1e293b">1) скачок</text>
+    <text x="80" y="138" text-anchor="middle" font-size="10.5" fill="#64748b">0 или 1, рывком</text>
+  </g>
+
+  <!-- 2: sigmoid -->
+  <g transform="translate(205,50)">
+    <rect width="160" height="140" rx="8" fill="#f8fafc" stroke="#e2e8f0"/>
+    <line x1="20" y1="115" x2="150" y2="115" stroke="#94a3b8" stroke-width="1"/>
+    <line x1="80" y1="20" x2="80" y2="125" stroke="#94a3b8" stroke-width="1"/>
+    <path d="M20,113 C55,113 60,50 80,50 C100,50 105,47 140,47" fill="none" stroke="#16a34a" stroke-width="2.5"/>
+    <path d="M20,113 C50,113 65,47 80,47 C95,47 110,47 140,47" fill="none" stroke="#16a34a" stroke-width="2.5"/>
+    <text x="80" y="20" text-anchor="middle" font-size="12" font-weight="600" fill="#1e293b">2) сигмоида σ</text>
+    <text x="80" y="138" text-anchor="middle" font-size="10.5" fill="#64748b">плавно 0 … 1</text>
+  </g>
+
+  <!-- 3: tanh -->
+  <g transform="translate(390,50)">
+    <rect width="160" height="140" rx="8" fill="#f8fafc" stroke="#e2e8f0"/>
+    <line x1="20" y1="70" x2="150" y2="70" stroke="#94a3b8" stroke-width="1"/>
+    <line x1="80" y1="20" x2="80" y2="125" stroke="#94a3b8" stroke-width="1"/>
+    <path d="M20,110 C55,110 62,30 80,30 C98,30 105,30 140,30" fill="none" stroke="#9333ea" stroke-width="2.5"/>
+    <text x="80" y="20" text-anchor="middle" font-size="12" font-weight="600" fill="#1e293b">3) tanh</text>
+    <text x="80" y="138" text-anchor="middle" font-size="10.5" fill="#64748b">плавно −1 … 1</text>
+  </g>
+
+  <!-- 4: ReLU -->
+  <g transform="translate(575,50)">
+    <rect width="160" height="140" rx="8" fill="#f8fafc" stroke="#e2e8f0"/>
+    <line x1="20" y1="115" x2="150" y2="115" stroke="#94a3b8" stroke-width="1"/>
+    <line x1="80" y1="20" x2="80" y2="125" stroke="#94a3b8" stroke-width="1"/>
+    <path d="M20,115 L80,115 L140,35" fill="none" stroke="#ea580c" stroke-width="2.5"/>
+    <text x="80" y="20" text-anchor="middle" font-size="12" font-weight="600" fill="#1e293b">4) ReLU</text>
+    <text x="80" y="138" text-anchor="middle" font-size="10.5" fill="#64748b">0 при x&lt;0, иначе x</text>
+  </g>
+</svg>

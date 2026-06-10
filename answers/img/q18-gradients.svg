@@ -1,0 +1,67 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 430" font-family="-apple-system, 'Segoe UI', Roboto, sans-serif">
+  <rect width="760" height="430" fill="#ffffff"/>
+  <defs>
+    <marker id="g18" markerWidth="9" markerHeight="9" refX="6" refY="3" orient="auto"><path d="M0,0 L6,3 L0,6 Z" fill="#475569"/></marker>
+  </defs>
+  <text x="380" y="28" text-anchor="middle" font-size="19" font-weight="700" fill="#0f172a">Градиенты в глубоком обучении</text>
+
+  <!-- gradient descent valley -->
+  <rect x="25" y="50" width="340" height="180" rx="12" fill="#f8fafc" stroke="#e2e8f0"/>
+  <text x="195" y="73" text-anchor="middle" font-size="13.5" font-weight="700" fill="#1e293b">Градиентный спуск: «вниз по склону»</text>
+  <path d="M55,95 C120,95 130,200 195,200 C260,200 270,95 335,95" fill="none" stroke="#2563eb" stroke-width="2.5"/>
+  <!-- ball steps -->
+  <circle cx="80" cy="108" r="7" fill="#f59e0b" stroke="#b45309"/>
+  <circle cx="120" cy="150" r="7" fill="#f59e0b" stroke="#b45309" opacity="0.6"/>
+  <circle cx="160" cy="185" r="7" fill="#f59e0b" stroke="#b45309" opacity="0.5"/>
+  <circle cx="195" cy="200" r="8" fill="#16a34a" stroke="#15803d"/>
+  <path d="M85,112 L116,146" stroke="#94a3b8" stroke-width="1.2" marker-end="url(#g18)"/>
+  <path d="M125,154 L156,181" stroke="#94a3b8" stroke-width="1.2" marker-end="url(#g18)"/>
+  <text x="195" y="222" text-anchor="middle" font-size="11" fill="#15803d">минимум ошибки</text>
+  <text x="335" y="120" text-anchor="end" font-size="11" fill="#64748b">ошибка L</text>
+  <text x="50" y="135" font-size="11" fill="#0f172a">w ← w − α·(∂L/∂w)</text>
+
+  <!-- learning rate panels -->
+  <rect x="380" y="50" width="355" height="180" rx="12" fill="#f8fafc" stroke="#e2e8f0"/>
+  <text x="557" y="73" text-anchor="middle" font-size="13.5" font-weight="700" fill="#1e293b">Скорость обучения α</text>
+  <g>
+    <text x="445" y="95" text-anchor="middle" font-size="11" fill="#b91c1c">α большая</text>
+    <path d="M405,180 C430,120 460,120 485,180" fill="none" stroke="#cbd5e1" stroke-width="2"/>
+    <path d="M412,150 L478,150 M430,130 L460,130" stroke="#dc2626" stroke-width="1.5" stroke-dasharray="3 2"/>
+    <circle cx="412" cy="150" r="4" fill="#dc2626"/><circle cx="478" cy="150" r="4" fill="#dc2626"/>
+    <text x="445" y="200" text-anchor="middle" font-size="9.5" fill="#b91c1c">перепрыгивает</text>
+
+    <text x="557" y="95" text-anchor="middle" font-size="11" fill="#15803d">α в самый раз</text>
+    <path d="M517,180 C542,120 572,120 597,180" fill="none" stroke="#cbd5e1" stroke-width="2"/>
+    <path d="M524,150 L545,168 L557,174" stroke="#16a34a" stroke-width="1.8"/>
+    <circle cx="557" cy="174" r="4" fill="#16a34a"/>
+    <text x="557" y="200" text-anchor="middle" font-size="9.5" fill="#15803d">плавно вниз</text>
+
+    <text x="675" y="95" text-anchor="middle" font-size="11" fill="#b45309">α малая</text>
+    <path d="M635,180 C660,120 690,120 715,180" fill="none" stroke="#cbd5e1" stroke-width="2"/>
+    <path d="M648,168 L658,172 L666,175" stroke="#f59e0b" stroke-width="1.8"/>
+    <circle cx="666" cy="175" r="4" fill="#f59e0b"/>
+    <text x="675" y="200" text-anchor="middle" font-size="9.5" fill="#b45309">учится вечно</text>
+  </g>
+
+  <!-- vanishing gradient -->
+  <rect x="25" y="248" width="710" height="165" rx="12" fill="#fef2f2" stroke="#fecaca"/>
+  <text x="380" y="272" text-anchor="middle" font-size="14" font-weight="700" fill="#b91c1c">Затухание градиента (и взрыв)</text>
+  <text x="380" y="293" text-anchor="middle" font-size="12" fill="#334155">Градиент идёт назад через много слоёв = ПРОИЗВЕДЕНИЕ множителей по цепочке</text>
+
+  <!-- chain vanishing -->
+  <g font-size="12" text-anchor="middle">
+    <text x="70" y="330" fill="#0f172a">выход</text>
+    <g fill="#fee2e2" stroke="#dc2626"><rect x="120" y="315" width="60" height="28" rx="6"/><rect x="210" y="315" width="60" height="28" rx="6"/><rect x="300" y="315" width="60" height="28" rx="6"/><rect x="390" y="315" width="60" height="28" rx="6"/></g>
+    <text x="150" y="333" fill="#b91c1c">×0.2</text><text x="240" y="333" fill="#b91c1c">×0.2</text><text x="330" y="333" fill="#b91c1c">×0.2</text><text x="420" y="333" fill="#b91c1c">×0.2</text>
+    <line x1="100" y1="329" x2="118" y2="329" stroke="#475569" stroke-width="1.5" marker-end="url(#g18)"/>
+    <line x1="180" y1="329" x2="208" y2="329" stroke="#475569" stroke-width="1.5" marker-end="url(#g18)"/>
+    <line x1="270" y1="329" x2="298" y2="329" stroke="#475569" stroke-width="1.5" marker-end="url(#g18)"/>
+    <line x1="360" y1="329" x2="388" y2="329" stroke="#475569" stroke-width="1.5" marker-end="url(#g18)"/>
+    <line x1="450" y1="329" x2="490" y2="329" stroke="#475569" stroke-width="1.5" marker-end="url(#g18)"/>
+    <text x="540" y="333" fill="#dc2626" font-weight="700">≈ 0 (затухло!)</text>
+  </g>
+  <text x="190" y="368" text-anchor="middle" font-size="11.5" fill="#b91c1c">множители &lt; 1 → произведение → 0</text>
+  <text x="190" y="385" text-anchor="middle" font-size="11" fill="#64748b">ранние слои почти не учатся</text>
+  <text x="565" y="368" text-anchor="middle" font-size="11.5" fill="#9a3412">множители &gt; 1 → произведение → ∞ (взрыв)</text>
+  <text x="380" y="405" text-anchor="middle" font-size="11.5" fill="#15803d">Лечат: остаточные связи (skip), LayerNorm, деление на √d<tspan font-size="9" dy="3">k</tspan><tspan dy="-3">, ReLU</tspan></text>
+</svg>

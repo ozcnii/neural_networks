@@ -1,0 +1,73 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 560" font-family="-apple-system, 'Segoe UI', Roboto, sans-serif">
+  <rect width="760" height="560" fill="#ffffff"/>
+  <defs>
+    <marker id="t12" markerWidth="9" markerHeight="9" refX="6" refY="3" orient="auto"><path d="M0,0 L6,3 L0,6 Z" fill="#475569"/></marker>
+  </defs>
+  <text x="380" y="30" text-anchor="middle" font-size="19" font-weight="700" fill="#0f172a">Архитектура «трансформер» (GPT-декодер)</text>
+
+  <!-- left column: data flow -->
+  <g text-anchor="middle" font-size="12.5">
+    <!-- text -->
+    <rect x="70" y="55" width="200" height="34" rx="8" fill="#e2e8f0" stroke="#64748b"/><text x="170" y="77" fill="#0f172a">текст: «кот сидит на»</text>
+    <line x1="170" y1="89" x2="170" y2="105" stroke="#475569" stroke-width="1.6" marker-end="url(#t12)"/>
+    <!-- tokens -->
+    <rect x="70" y="106" width="200" height="32" rx="8" fill="#dbeafe" stroke="#2563eb"/><text x="170" y="127" fill="#1e40af">токены → индексы</text>
+    <line x1="170" y1="138" x2="170" y2="154" stroke="#475569" stroke-width="1.6" marker-end="url(#t12)"/>
+    <!-- embeddings -->
+    <rect x="70" y="155" width="200" height="46" rx="8" fill="#dcfce7" stroke="#16a34a"/><text x="170" y="174" fill="#15803d">эмбеддинги (векторы)</text><text x="170" y="191" font-size="11" fill="#15803d">+ позиционные (порядок слов)</text>
+    <line x1="170" y1="201" x2="170" y2="217" stroke="#475569" stroke-width="1.6" marker-end="url(#t12)"/>
+
+    <!-- N blocks -->
+    <rect x="55" y="218" width="230" height="210" rx="12" fill="#faf5ff" stroke="#9333ea" stroke-width="1.5" stroke-dasharray="5 3"/>
+    <text x="170" y="237" font-size="12.5" font-weight="700" fill="#7e22ce">× N блоков (декодер)</text>
+
+    <rect x="80" y="248" width="180" height="40" rx="8" fill="#fef3c7" stroke="#f59e0b"/><text x="170" y="266" fill="#b45309" font-weight="600">внимание (Q·K·V)</text><text x="170" y="281" font-size="10.5" fill="#92400e">multi-head + каузальная маска</text>
+    <rect x="80" y="294" width="180" height="24" rx="6" fill="#ede9fe" stroke="#8b5cf6"/><text x="170" y="311" font-size="11" fill="#6d28d9">+ сложение, LayerNorm</text>
+    <rect x="80" y="324" width="180" height="34" rx="8" fill="#e0e7ff" stroke="#6366f1"/><text x="170" y="346" fill="#4338ca" font-weight="600">полносвязный слой (FFN)</text>
+    <rect x="80" y="364" width="180" height="24" rx="6" fill="#ede9fe" stroke="#8b5cf6"/><text x="170" y="381" font-size="11" fill="#6d28d9">+ сложение, LayerNorm</text>
+    <text x="170" y="412" font-size="10.5" fill="#7e22ce">остаточные связи: x = x + слой(x)</text>
+    <text x="170" y="424" font-size="10" fill="#94a3b8">(чтобы градиенты не затухали)</text>
+
+    <line x1="170" y1="428" x2="170" y2="444" stroke="#475569" stroke-width="1.6" marker-end="url(#t12)"/>
+    <rect x="70" y="445" width="200" height="30" rx="8" fill="#dbeafe" stroke="#2563eb"/><text x="170" y="465" font-size="11.5" fill="#1e40af">линейный слой → softmax</text>
+    <line x1="170" y1="475" x2="170" y2="491" stroke="#475569" stroke-width="1.6" marker-end="url(#t12)"/>
+    <rect x="70" y="492" width="200" height="32" rx="8" fill="#1e293b"/><text x="170" y="513" fill="#fff" font-weight="600">следующее слово: «ковре»</text>
+  </g>
+
+  <!-- right column: attention detail -->
+  <g>
+    <rect x="330" y="70" width="400" height="220" rx="12" fill="#fffbeb" stroke="#f59e0b" stroke-width="1.5"/>
+    <text x="530" y="94" text-anchor="middle" font-size="14" font-weight="700" fill="#b45309">Механизм внимания: Q · K · V</text>
+    <text x="530" y="118" text-anchor="middle" font-size="12" fill="#334155">Каждое слово строит три вектора:</text>
+    <g font-size="12">
+      <rect x="350" y="130" width="360" height="26" rx="6" fill="#fff7ed"/><text x="360" y="148" fill="#9a3412"><tspan font-weight="700">Q</tspan> (запрос) — «что я ищу?»</text>
+      <rect x="350" y="160" width="360" height="26" rx="6" fill="#fff7ed"/><text x="360" y="178" fill="#9a3412"><tspan font-weight="700">K</tspan> (ключ) — «что я предлагаю?»</text>
+      <rect x="350" y="190" width="360" height="26" rx="6" fill="#fff7ed"/><text x="360" y="208" fill="#9a3412"><tspan font-weight="700">V</tspan> (значение) — «моя информация»</text>
+    </g>
+    <rect x="350" y="226" width="360" height="48" rx="8" fill="#fef3c7" stroke="#f59e0b"/>
+    <text x="530" y="246" text-anchor="middle" font-size="13" fill="#92400e">Attention = softmax(Q·K<tspan font-size="9" dy="-5">T</tspan><tspan dy="5"> / √d</tspan><tspan font-size="9" dy="3">k</tspan><tspan dy="-3">) · V</tspan></text>
+    <text x="530" y="265" text-anchor="middle" font-size="10.5" fill="#b45309">похожесть Q и K → веса → взвешенная сумма V</text>
+  </g>
+
+  <!-- transformer vs RNN note -->
+  <g>
+    <rect x="330" y="310" width="400" height="118" rx="12" fill="#f0fdf4" stroke="#16a34a" stroke-width="1.5"/>
+    <text x="530" y="334" text-anchor="middle" font-size="14" font-weight="700" fill="#15803d">Чем лучше рекуррентных?</text>
+    <text x="350" y="360" font-size="12" fill="#166534">• смотрит на все слова СРАЗУ (не по цепочке)</text>
+    <text x="350" y="384" font-size="12" fill="#166534">• считает параллельно → быстро на GPU</text>
+    <text x="350" y="408" font-size="12" fill="#166534">• хорошо ловит далёкие связи в тексте</text>
+  </g>
+
+  <!-- families -->
+  <g font-size="12">
+    <rect x="330" y="448" width="195" height="76" rx="10" fill="#eef2ff" stroke="#6366f1"/>
+    <text x="427" y="470" text-anchor="middle" font-weight="700" fill="#4338ca">GPT</text>
+    <text x="427" y="490" text-anchor="middle" font-size="11" fill="#475569">только декодер,</text>
+    <text x="427" y="506" text-anchor="middle" font-size="11" fill="#475569">генерирует слева направо</text>
+    <rect x="535" y="448" width="195" height="76" rx="10" fill="#faf5ff" stroke="#9333ea"/>
+    <text x="632" y="470" text-anchor="middle" font-weight="700" fill="#7e22ce">BERT</text>
+    <text x="632" y="490" text-anchor="middle" font-size="11" fill="#475569">только кодировщик,</text>
+    <text x="632" y="506" text-anchor="middle" font-size="11" fill="#475569">видит текст в обе стороны</text>
+  </g>
+  <text x="380" y="548" text-anchor="middle" font-size="11.5" fill="#94a3b8">2017, «Attention is all you need» (Google) · GPT = Generative Pretrained Transformer</text>
+</svg>

@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 380" font-family="-apple-system, 'Segoe UI', Roboto, sans-serif">
+  <rect width="760" height="380" fill="#ffffff"/>
+  <text x="380" y="30" text-anchor="middle" font-size="19" font-weight="700" fill="#0f172a">Лестница абстракции: к чему ведёт вайбкодинг</text>
+  <text x="380" y="52" text-anchor="middle" font-size="12.5" fill="#64748b">каждый шаг — дальше от «железа», ближе к человеку</text>
+
+  <!-- steps as ascending stairs -->
+  <g font-size="12.5">
+    <!-- step 1 -->
+    <rect x="40"  y="300" width="200" height="40" rx="7" fill="#fee2e2" stroke="#dc2626"/><text x="140" y="325" text-anchor="middle" fill="#b91c1c">машинный код (0/1)</text>
+    <!-- step 2 -->
+    <rect x="140" y="252" width="200" height="40" rx="7" fill="#ffedd5" stroke="#ea580c"/><text x="240" y="277" text-anchor="middle" fill="#9a3412">ассемблер (ADD, СТОП)</text>
+    <!-- step 3 -->
+    <rect x="240" y="204" width="210" height="40" rx="7" fill="#fef3c7" stroke="#f59e0b"/><text x="345" y="229" text-anchor="middle" fill="#92400e">языки высокого уровня (Си)</text>
+    <!-- step 4 -->
+    <rect x="345" y="156" width="210" height="40" rx="7" fill="#dcfce7" stroke="#16a34a"/><text x="450" y="181" text-anchor="middle" fill="#15803d">декларативные (SQL, Пролог)</text>
+    <!-- step 5 -->
+    <rect x="450" y="108" width="210" height="40" rx="7" fill="#dbeafe" stroke="#2563eb"/><text x="555" y="133" text-anchor="middle" fill="#1e40af">визуальное программирование</text>
+    <!-- step 6 -->
+    <rect x="520" y="60" width="220" height="40" rx="7" fill="#ede9fe" stroke="#8b5cf6"/><text x="630" y="80" text-anchor="middle" fill="#6d28d9" font-weight="700">естественный язык</text><text x="630" y="94" text-anchor="middle" font-size="10.5" fill="#6d28d9">= ВАЙБКОДИНГ (ИИ пишет код)</text>
+  </g>
+
+  <!-- ascending arrow -->
+  <path d="M55,320 L640,80" stroke="#94a3b8" stroke-width="1.5" stroke-dasharray="5 4" fill="none"/>
+  <text x="120" y="365" font-size="11.5" fill="#475569">⟵ ближе к «железу», труднее людям</text>
+  <text x="600" y="365" text-anchor="middle" font-size="11.5" fill="#475569">проще людям ⟶</text>
+</svg>

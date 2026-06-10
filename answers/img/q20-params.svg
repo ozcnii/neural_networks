@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 360" font-family="-apple-system, 'Segoe UI', Roboto, sans-serif">
+  <rect width="760" height="360" fill="#ffffff"/>
+  <text x="380" y="30" text-anchor="middle" font-size="19" font-weight="700" fill="#0f172a">Что подбирают при обучении нейросети</text>
+
+  <!-- auto-tuned weights banner -->
+  <rect x="25" y="50" width="710" height="40" rx="10" fill="#f1f5f9" stroke="#cbd5e1"/>
+  <text x="380" y="75" text-anchor="middle" font-size="13" fill="#334155"><tspan font-weight="700">Веса</tspan> — НЕ подбираем вручную: их настраивает само обучение (мы лишь инициализируем случайно)</text>
+
+  <!-- three groups -->
+  <!-- architecture -->
+  <rect x="25" y="105" width="225" height="235" rx="12" fill="#eff6ff" stroke="#2563eb" stroke-width="1.5"/>
+  <text x="137" y="130" text-anchor="middle" font-size="14" font-weight="700" fill="#1e40af">Архитектура</text>
+  <text x="137" y="148" text-anchor="middle" font-size="10.5" fill="#64748b">(выбираем ДО обучения)</text>
+  <g font-size="12.5" fill="#0f172a">
+    <text x="45" y="180">• число слоёв (глубина)</text>
+    <text x="45" y="210">• число нейронов в слое</text>
+    <text x="45" y="240">• функция активации</text>
+    <text x="62" y="258" font-size="11" fill="#64748b">(ReLU, сигмоида, tanh)</text>
+    <text x="45" y="285">• тип сети под задачу</text>
+    <text x="62" y="303" font-size="11" fill="#64748b">(FFN/CNN/RNN/Transf.)</text>
+  </g>
+
+  <!-- training -->
+  <rect x="267" y="105" width="225" height="235" rx="12" fill="#fffbeb" stroke="#f59e0b" stroke-width="1.5"/>
+  <text x="379" y="130" text-anchor="middle" font-size="14" font-weight="700" fill="#b45309">Обучение</text>
+  <text x="379" y="148" text-anchor="middle" font-size="10.5" fill="#64748b">(гиперпараметры)</text>
+  <g font-size="12.5" fill="#0f172a">
+    <text x="287" y="178">• скорость обучения α</text>
+    <text x="287" y="206">• число эпох (epochs)</text>
+    <text x="287" y="234">• batch_size</text>
+    <text x="287" y="262">• оптимизатор</text>
+    <text x="304" y="280" font-size="11" fill="#64748b">(SGD, Adam, rmsprop)</text>
+    <text x="287" y="307">• функция потерь (loss)</text>
+    <text x="304" y="325" font-size="11" fill="#64748b">(mse, кросс-энтропия)</text>
+  </g>
+
+  <!-- regularization -->
+  <rect x="509" y="105" width="226" height="235" rx="12" fill="#f0fdf4" stroke="#16a34a" stroke-width="1.5"/>
+  <text x="622" y="130" text-anchor="middle" font-size="14" font-weight="700" fill="#15803d">Регуляризация</text>
+  <text x="622" y="148" text-anchor="middle" font-size="10.5" fill="#64748b">(против переобучения)</text>
+  <g font-size="12.5" fill="#0f172a">
+    <text x="529" y="182">• dropout (rate)</text>
+    <text x="546" y="200" font-size="11" fill="#64748b">выключает нейроны</text>
+    <text x="529" y="232">• validation_split</text>
+    <text x="546" y="250" font-size="11" fill="#64748b">доля проверки</text>
+    <text x="529" y="282">• early stopping</text>
+    <text x="546" y="300" font-size="11" fill="#64748b">ранняя остановка</text>
+  </g>
+</svg>

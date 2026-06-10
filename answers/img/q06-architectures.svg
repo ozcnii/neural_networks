@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 380" font-family="-apple-system, 'Segoe UI', Roboto, sans-serif">
+  <rect width="760" height="380" fill="#ffffff"/>
+  <defs>
+    <marker id="a6" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto"><path d="M0,0 L6,3 L0,6 Z" fill="#475569"/></marker>
+    <marker id="a6r" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto"><path d="M0,0 L6,3 L0,6 Z" fill="#dc2626"/></marker>
+  </defs>
+  <text x="380" y="30" text-anchor="middle" font-size="19" font-weight="700" fill="#0f172a">Архитектуры: по направлению сигнала</text>
+
+  <!-- left: feedforward -->
+  <rect x="30" y="55" width="330" height="160" rx="12" fill="#f8fafc" stroke="#cbd5e1"/>
+  <text x="195" y="80" text-anchor="middle" font-size="14" font-weight="700" fill="#1e40af">Прямого распространения</text>
+  <g stroke="#475569" stroke-width="1.4" fill="none">
+    <line x1="90" y1="150" x2="160" y2="150" marker-end="url(#a6)"/>
+    <line x1="200" y1="150" x2="270" y2="150" marker-end="url(#a6)"/>
+  </g>
+  <g>
+    <circle cx="70" cy="150" r="18" fill="#dbeafe" stroke="#2563eb" stroke-width="1.5"/><text x="70" y="155" text-anchor="middle" font-size="12">вход</text>
+    <circle cx="180" cy="150" r="22" fill="#e0e7ff" stroke="#6366f1" stroke-width="1.5"/><text x="180" y="154" text-anchor="middle" font-size="9.5">скрытые</text>
+    <circle cx="290" cy="150" r="18" fill="#bfdbfe" stroke="#2563eb" stroke-width="2"/><text x="290" y="155" text-anchor="middle" font-size="12">выход</text>
+  </g>
+  <text x="195" y="200" text-anchor="middle" font-size="12" fill="#475569">сигнал только вперёд</text>
+
+  <!-- right: recurrent -->
+  <rect x="400" y="55" width="330" height="160" rx="12" fill="#fef2f2" stroke="#fecaca"/>
+  <text x="565" y="80" text-anchor="middle" font-size="14" font-weight="700" fill="#b91c1c">С обратными связями (рекуррентная)</text>
+  <g stroke="#475569" stroke-width="1.4" fill="none">
+    <line x1="490" y1="150" x2="535" y2="150" marker-end="url(#a6)"/>
+    <line x1="595" y1="150" x2="640" y2="150" marker-end="url(#a6)"/>
+  </g>
+  <circle cx="470" cy="150" r="18" fill="#dbeafe" stroke="#2563eb" stroke-width="1.5"/><text x="470" y="155" text-anchor="middle" font-size="12">вход</text>
+  <rect x="540" y="130" width="50" height="40" rx="8" fill="#fee2e2" stroke="#dc2626" stroke-width="1.5"/><text x="565" y="155" text-anchor="middle" font-size="12">слой</text>
+  <circle cx="660" cy="150" r="18" fill="#bfdbfe" stroke="#2563eb" stroke-width="2"/><text x="660" y="155" text-anchor="middle" font-size="12">выход</text>
+  <!-- feedback loop -->
+  <path d="M565,130 C565,100 615,100 615,130 L615,150" fill="none" stroke="#dc2626" stroke-width="1.8" marker-end="url(#a6r)"/>
+  <text x="565" y="205" text-anchor="middle" font-size="12" fill="#b91c1c">выход возвращается назад → «память»</text>
+
+  <!-- families row -->
+  <text x="380" y="258" text-anchor="middle" font-size="15" font-weight="700" fill="#0f172a">Основные семейства — под задачу</text>
+  <g font-size="12.5" font-weight="600">
+    <rect x="30"  y="278" width="165" height="70" rx="10" fill="#eff6ff" stroke="#2563eb"/><text x="112" y="305" text-anchor="middle" fill="#1e40af">FFN</text><text x="112" y="328" text-anchor="middle" font-size="11.5" font-weight="400" fill="#475569">таблицы</text>
+    <rect x="215" y="278" width="165" height="70" rx="10" fill="#f0fdf4" stroke="#16a34a"/><text x="297" y="305" text-anchor="middle" fill="#15803d">CNN</text><text x="297" y="328" text-anchor="middle" font-size="11.5" font-weight="400" fill="#475569">картинки</text>
+    <rect x="400" y="278" width="165" height="70" rx="10" fill="#fffbeb" stroke="#f59e0b"/><text x="482" y="305" text-anchor="middle" fill="#b45309">RNN / LSTM</text><text x="482" y="328" text-anchor="middle" font-size="11.5" font-weight="400" fill="#475569">последовательности</text>
+    <rect x="585" y="278" width="145" height="70" rx="10" fill="#faf5ff" stroke="#9333ea"/><text x="657" y="305" text-anchor="middle" fill="#7e22ce">Transformer</text><text x="657" y="328" text-anchor="middle" font-size="11.5" font-weight="400" fill="#475569">текст</text>
+  </g>
+</svg>

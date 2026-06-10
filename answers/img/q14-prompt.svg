@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 300" font-family="-apple-system, 'Segoe UI', Roboto, sans-serif">
+  <rect width="760" height="300" fill="#ffffff"/>
+  <text x="380" y="30" text-anchor="middle" font-size="19" font-weight="700" fill="#0f172a">Примеры в промпте: zero-shot → one-shot → few-shot</text>
+
+  <!-- zero-shot -->
+  <rect x="30" y="60" width="225" height="210" rx="12" fill="#fef2f2" stroke="#fca5a5"/>
+  <text x="142" y="86" text-anchor="middle" font-size="14" font-weight="700" fill="#b91c1c">zero-shot</text>
+  <text x="142" y="106" text-anchor="middle" font-size="11" fill="#7f1d1d">примеров НЕТ</text>
+  <rect x="48" y="120" width="189" height="130" rx="8" fill="#fff" stroke="#fecaca"/>
+  <text x="60" y="144" font-size="11.5" fill="#334155">«Переведи заказ</text>
+  <text x="60" y="162" font-size="11.5" fill="#334155"> пиццы в JSON»</text>
+  <text x="60" y="196" font-size="11" fill="#94a3b8">модель догадывается</text>
+  <text x="60" y="212" font-size="11" fill="#94a3b8">сама, риск ошибки выше</text>
+
+  <!-- one-shot -->
+  <rect x="268" y="60" width="225" height="210" rx="12" fill="#fffbeb" stroke="#fcd34d"/>
+  <text x="380" y="86" text-anchor="middle" font-size="14" font-weight="700" fill="#b45309">one-shot</text>
+  <text x="380" y="106" text-anchor="middle" font-size="11" fill="#92400e">ОДИН пример</text>
+  <rect x="286" y="120" width="189" height="130" rx="8" fill="#fff" stroke="#fde68a"/>
+  <text x="298" y="142" font-size="11" fill="#475569">ПРИМЕР:</text>
+  <text x="298" y="158" font-size="11" fill="#334155">«малую с сыром» →</text>
+  <text x="298" y="174" font-size="11" fill="#16a34a">{"size":"малая",...}</text>
+  <text x="298" y="206" font-size="11" fill="#334155">Запрос:</text>
+  <text x="298" y="222" font-size="11" fill="#334155">«большую с грибами» → ?</text>
+
+  <!-- few-shot -->
+  <rect x="506" y="60" width="225" height="210" rx="12" fill="#f0fdf4" stroke="#86efac"/>
+  <text x="618" y="86" text-anchor="middle" font-size="14" font-weight="700" fill="#15803d">few-shot</text>
+  <text x="618" y="106" text-anchor="middle" font-size="11" fill="#166534">НЕСКОЛЬКО примеров</text>
+  <rect x="524" y="120" width="189" height="130" rx="8" fill="#fff" stroke="#bbf7d0"/>
+  <text x="536" y="140" font-size="11" fill="#16a34a">ПРИМЕР 1 → {...}</text>
+  <text x="536" y="158" font-size="11" fill="#16a34a">ПРИМЕР 2 → {...}</text>
+  <text x="536" y="176" font-size="11" fill="#16a34a">ПРИМЕР 3 → {...}</text>
+  <text x="536" y="208" font-size="11" fill="#334155">Запрос → ?</text>
+  <text x="536" y="232" font-size="10.5" fill="#15803d">самый надёжный формат</text>
+
+  <text x="380" y="290" text-anchor="middle" font-size="12" fill="#64748b">чем больше показал образцов формата — тем точнее ответ</text>
+</svg>

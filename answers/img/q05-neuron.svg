@@ -1,0 +1,69 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 360" font-family="-apple-system, 'Segoe UI', Roboto, sans-serif">
+  <defs>
+    <marker id="arrow" markerWidth="9" markerHeight="9" refX="7" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L7,3 L0,6 Z" fill="#475569"/>
+    </marker>
+    <marker id="arrowBlue" markerWidth="9" markerHeight="9" refX="7" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L7,3 L0,6 Z" fill="#2563eb"/>
+    </marker>
+  </defs>
+
+  <rect x="0" y="0" width="760" height="360" fill="#ffffff"/>
+  <text x="380" y="30" text-anchor="middle" font-size="19" font-weight="700" fill="#0f172a">Формальный нейрон</text>
+
+  <!-- inputs -->
+  <g font-size="15" fill="#0f172a">
+    <circle cx="70" cy="90"  r="20" fill="#dbeafe" stroke="#2563eb" stroke-width="1.5"/><text x="70" y="95" text-anchor="middle">x<tspan font-size="11" dy="4">1</tspan></text>
+    <circle cx="70" cy="150" r="20" fill="#dbeafe" stroke="#2563eb" stroke-width="1.5"/><text x="70" y="155" text-anchor="middle">x<tspan font-size="11" dy="4">2</tspan></text>
+    <circle cx="70" cy="210" r="20" fill="#dbeafe" stroke="#2563eb" stroke-width="1.5"/><text x="70" y="215" text-anchor="middle">x<tspan font-size="11" dy="4">3</tspan></text>
+    <circle cx="70" cy="280" r="20" fill="#dbeafe" stroke="#2563eb" stroke-width="1.5"/><text x="70" y="285" text-anchor="middle">x<tspan font-size="11" dy="4">n</tspan></text>
+    <text x="70" y="248" text-anchor="middle" font-size="20" fill="#64748b">⋮</text>
+  </g>
+  <text x="70" y="60" text-anchor="middle" font-size="13" fill="#64748b">входы</text>
+
+  <!-- weights arrows to sum -->
+  <g stroke="#475569" stroke-width="1.6" fill="none">
+    <line x1="92" y1="90"  x2="278" y2="178" marker-end="url(#arrow)"/>
+    <line x1="92" y1="150" x2="278" y2="184" marker-end="url(#arrow)"/>
+    <line x1="92" y1="210" x2="278" y2="196" marker-end="url(#arrow)"/>
+    <line x1="92" y1="280" x2="278" y2="204" marker-end="url(#arrow)"/>
+  </g>
+  <!-- weight labels -->
+  <g font-size="14" fill="#b45309" font-weight="600">
+    <text x="178" y="120">w<tspan font-size="10" dy="3">1</tspan></text>
+    <text x="178" y="160">w<tspan font-size="10" dy="3">2</tspan></text>
+    <text x="178" y="214">w<tspan font-size="10" dy="3">3</tspan></text>
+    <text x="178" y="258">w<tspan font-size="10" dy="3">n</tspan></text>
+  </g>
+  <text x="175" y="80" text-anchor="middle" font-size="12" fill="#b45309">веса</text>
+
+  <!-- summation -->
+  <circle cx="305" cy="190" r="32" fill="#fef3c7" stroke="#f59e0b" stroke-width="2"/>
+  <text x="305" y="200" text-anchor="middle" font-size="26" fill="#b45309">Σ</text>
+  <text x="305" y="240" text-anchor="middle" font-size="12" fill="#64748b">сумматор</text>
+
+  <!-- bias -->
+  <circle cx="305" cy="110" r="18" fill="#ede9fe" stroke="#8b5cf6" stroke-width="1.5"/>
+  <text x="305" y="115" text-anchor="middle" font-size="15" fill="#6d28d9">b</text>
+  <line x1="305" y1="128" x2="305" y2="156" stroke="#8b5cf6" stroke-width="1.6" marker-end="url(#arrow)" fill="none"/>
+  <text x="345" y="112" font-size="12" fill="#6d28d9">смещение</text>
+
+  <!-- sum to activation -->
+  <line x1="337" y1="190" x2="420" y2="190" stroke="#475569" stroke-width="1.8" marker-end="url(#arrow)" fill="none"/>
+  <text x="378" y="180" text-anchor="middle" font-size="14" fill="#0f172a">s</text>
+
+  <!-- activation box -->
+  <rect x="420" y="158" width="120" height="64" rx="10" fill="#dcfce7" stroke="#16a34a" stroke-width="2"/>
+  <text x="480" y="186" text-anchor="middle" font-size="18" fill="#15803d">f ( s )</text>
+  <text x="480" y="206" text-anchor="middle" font-size="11.5" fill="#15803d">функция активации</text>
+
+  <!-- output -->
+  <line x1="540" y1="190" x2="628" y2="190" stroke="#2563eb" stroke-width="2" marker-end="url(#arrowBlue)" fill="none"/>
+  <circle cx="660" cy="190" r="24" fill="#bfdbfe" stroke="#2563eb" stroke-width="2"/>
+  <text x="660" y="196" text-anchor="middle" font-size="17" fill="#1e40af">y</text>
+  <text x="660" y="150" text-anchor="middle" font-size="13" fill="#64748b">выход</text>
+
+  <!-- formula -->
+  <rect x="190" y="300" width="380" height="42" rx="8" fill="#f8fafc" stroke="#cbd5e1" stroke-width="1"/>
+  <text x="380" y="327" text-anchor="middle" font-size="17" fill="#0f172a">s = b + Σ x<tspan font-size="11" dy="3">i</tspan><tspan dy="-3">·w</tspan><tspan font-size="11" dy="3">i</tspan><tspan dy="-3"> ,   y = f ( s )</tspan></text>
+</svg>
